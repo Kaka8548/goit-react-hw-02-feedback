@@ -10,6 +10,7 @@ export const BtnsWrapper = styled.div`
 export const Btn = styled.button`
   padding: 5px 10px;
   background-color: #fff;
+  text-transform: capitalize;
   font-size: 14px;
   font-weight: 600;
   border: 1px solid #dcdcdc;

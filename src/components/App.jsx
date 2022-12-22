@@ -11,11 +11,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  onBtnClick = event => {
-    event.preventDefault();
-    const stateName = event.target.innerHTML.toLowerCase();
-
-    this.setState(prevState => ({ [stateName]: prevState[stateName] + 1 }));
+  onBtnClick = option => {
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
   };
 
   render() {
@@ -27,9 +24,9 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            // options
+            options={Object.keys(this.state)}
             handleClick={this.onBtnClick}
-          ></FeedbackOptions>
+          />
         </Section>
         <Section title="">
           <Statistics
